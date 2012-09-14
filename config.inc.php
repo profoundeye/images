@@ -7,5 +7,5 @@ return array(
     'thumbFileRootPath' => __DIR__ . '/../attachs/thumb', //resized thumbnails save path, require read and write permission
     'thumbUrlRootPath' => __DIR__ . '/..' , //thumbnails url root path, require read and write permission
     'saveImage' => true,  //if true, thumbnails will be created and auto save as same directory structure as original images
-	'dir'=>'testyunbian/images/',//Èç¹ûµ±Ç°ÎÄ¼þ²»ÊÇÔÚ¸ùÄ¿Â¼¡£¸ùÄ¿Â¼Ãû
+	'dir'=>'images/',//ï¿½ï¿½ï¿½Ç°ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½
 );
