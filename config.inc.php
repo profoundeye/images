@@ -1,6 +1,6 @@
 <?php
 return array(
-    'debug' => true,
+    'debug' => false,
     //'error_redirect' => 'http://avnpc.com/pages/evacloudimage',
     'libPath' => __DIR__ . '/lib',  //PHPthumb library path
     'sourceRootPath' => __DIR__ . '/../attachs',  //original image save path, require path read permission

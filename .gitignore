@@ -1,8 +1,0 @@
-*
-!.htaccess
-!index.php
-!config.inc.php
-!upload*
-!EvaCloudImage*
-!.travis.yml
-!.gitignore
