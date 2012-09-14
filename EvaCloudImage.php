@@ -346,7 +346,11 @@ class EvaCloudImage
     {
         $sourceImage = $this->getSourceImage();
         $targetImage = $this->getTargetImage();
-
+		if(file_exists($targetImage)){
+			header("Content-type: image/jpeg");
+			echo file_get_contents($targetImage);
+			return;
+		}
         if(false === file_exists($sourceImage)){
             header('HTTP/1.1 404 Not Found');
             throw new Exception(printf('Source image is not exist, image path %s', $sourceImage));
