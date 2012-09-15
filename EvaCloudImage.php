@@ -222,7 +222,9 @@ class EvaCloudImage
         $subPath = $this->getSubPath();
         //$fileName = $this->getTargetImageName();
         $uniqueName = $this->getUniqueTargetImageName();
-
+		if( $options['thumbFilter']){
+			$subPath= $options['thumbFilter'].$subPath;
+		}
         return $this->targetImage = $options['thumbFileRootPath'] . DIRECTORY_SEPARATOR . $subPath . DIRECTORY_SEPARATOR . $uniqueName;
     }
 
@@ -288,8 +290,8 @@ class EvaCloudImage
         if(!$url || !$url['path']){
             throw new InvalidArgumentException('Url not able to parse');
         }
-		if( $options['dir']){
-			$url['path']= str_replace($options['dir'],"",$url['path']);
+		if( $options['sourceFilter']){
+			$url['path']= str_replace($options['sourceFilter'],"",$url['path']);
 		}
         $sourceImageName = $this->getSourceImageName($url['path']);
         $subPath = $this->getSubPath($url['path']);
@@ -346,6 +348,7 @@ class EvaCloudImage
     {
         $sourceImage = $this->getSourceImage();
         $targetImage = $this->getTargetImage();
+		
 		if(file_exists($targetImage)){
 			header("Content-type: image/jpeg");
 			echo file_get_contents($targetImage);
