@@ -8,7 +8,18 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  * @author    AlloVince
  */
+$url = $_SERVER['HTTP_REFERER'];
+$file = pathinfo($url);
+$pregs = array("/w_630$/");
+$pass = 0;
+foreach ($pregs as $preg) {
+	print_r(preg_match($preg, $file['filename']));
+	if(preg_match($preg, $file['filename'])){$pass=1; }
+}
 
+if($pass==0){
+	echo "no images";
+	exit;}
 
 
 require_once 'EvaCloudImage.php';
