@@ -13,7 +13,7 @@ $file = pathinfo($url);
 $pregs = array("/w_630$/");
 $pass = 0;
 foreach ($pregs as $preg) {
-	print_r(preg_match($preg, $file['filename']));
+	//print_r(preg_match($preg, $file['filename']));
 	if(preg_match($preg, $file['filename'])){$pass=1; }
 }
 
