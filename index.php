@@ -8,10 +8,11 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  * @author    AlloVince
  */
-$url = $_SERVER['HTTP_REFERER'];
+$url = $_SERVER['REDIRECT_URL'];
 $file = pathinfo($url);
 $pregs = array("/w_630$/");
 $pass = 0;
+//print_r($_SERVER);
 foreach ($pregs as $preg) {
 	//print_r(preg_match($preg, $file['filename']));
 	if(preg_match($preg, $file['filename'])){$pass=1; }
