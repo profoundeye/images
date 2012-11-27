@@ -10,7 +10,7 @@
  */
 $url = $_SERVER['REDIRECT_URL'];
 $file = pathinfo($url);
-$pregs = array("/w_630$/");
+$pregs = array("/w_630$/","/h_125$/");
 $pass = 0;
 //print_r($_SERVER);
 foreach ($pregs as $preg) {
